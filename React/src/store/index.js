@@ -1,13 +1,24 @@
-import { createStore } from 'redux';
-import { devToolsEnhancer } from 'redux-devtools-extension';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import reducer from 'src/reducers';
+import recipesMiddleware from '../middlewares/recipesMiddleware';
+import authMiddleware from '../middlewares/authMiddleware';
+
+// on combine devTools avec les middlewares
+const enhancers = composeWithDevTools(
+  applyMiddleware(
+    recipesMiddleware,
+    authMiddleware,
+    // ... d'autres middlewares
+  ),
+);
 
 const store = createStore(
   // le reducer
   reducer,
   // enhancer
-  devToolsEnhancer(),
+  enhancers,
 );
 
 export default store;

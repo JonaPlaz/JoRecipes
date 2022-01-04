@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // == Import
 import Nav from 'src/containers/Nav';
+import Page from 'src/components/Page';
 
 import './styles.css';
 
@@ -18,11 +19,12 @@ const App = ({ loadRecipes, recipesLoaded }) => {
       {recipesLoaded && (
         <>
           <Nav />
+          <Page />
         </>
       )}
-      {/* {!recipesLoaded && (
+      {!recipesLoaded && (
         <div>Chargement des recettes...</div>
-      )} */}
+      )}
     </div>
   );
 };
