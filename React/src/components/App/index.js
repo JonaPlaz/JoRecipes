@@ -22,9 +22,9 @@ const App = ({ loadRecipes, recipesLoaded }) => {
           <Page />
         </>
       )}
-      {/* {!recipesLoaded && (
+      {!recipesLoaded && (
         <div>Chargement des recettes...</div>
-      )} */}
+      )}
     </div>
   );
 };
