@@ -11,8 +11,8 @@ const Nav = ({ recipes }) => (
     <NavLink
       to="/"
       className="nav-item"
-      activeClassName="nav-item--active"
-      exact
+      // activeClassName="nav-item--active"
+      // exact
     >
       Accueil
     </NavLink>
@@ -20,7 +20,7 @@ const Nav = ({ recipes }) => (
       <NavLink
         to={`/recipe/${slugifyTitle(recipe.title)}`}
         className="nav-item"
-        activeClassName="nav-item--active"
+        // activeClassName="nav-item--active"
         key={recipe.id}
       >
         {recipe.title}
