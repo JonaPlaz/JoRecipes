@@ -71,9 +71,9 @@ import './loginform.css';
 
 LoginForm.propTypes = {
   /** value for the email */
-  // email: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
   /** value for the password */
-  // password: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
   /** called when onChange event is received by an input, two parameters :
    * - new value
    * - name

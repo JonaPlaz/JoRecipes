@@ -1,4 +1,4 @@
-import { UPDATE_LOGIN_FIELD} from '../actions/auth';
+import { UPDATE_LOGIN_FIELD, SAVE_USER_DATA } from '../actions/auth';
 
 const initialState = {
   email: '',
@@ -27,6 +27,14 @@ function authReducer(state = initialState, action = {}) {
         ...state,
         // on est prêts à gérer un formulaire de 50 champs avec une seule action
         [action.name]: action.newValue,
+      };
+
+    case SAVE_USER_DATA:
+      return {
+        ...state,
+        logged: action.logged,
+        token: action.token,
+        nickname: action.nickname,
       };
 
     default:
